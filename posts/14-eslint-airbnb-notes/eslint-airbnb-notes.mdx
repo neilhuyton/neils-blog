@@ -1,0 +1,61 @@
+---
+title: Eslint Airbnb Notes
+slug: /eslint-airbnb-notes
+author: Neil Huyton
+---
+
+#### Type Annotations
+
+Lightweight ways to record the intended contract of the function or variable.
+
+#### Interfaces
+
+Describes objects
+
+#### Classes
+
+Classes in TypeScript are just a shorthand for the same prototype-based OO that is frequently used in JavaScript.
+
+#### Basic Types
+
+Boolean: true/false
+Number: floating point values
+String: textual data, uses double quotes (") or single quotes (') to surround string data
+Array:
+first, you use the type of the elements followed by []
+second way uses a generic array type
+
+#### Tuple
+
+Express an array with a fixed number of elements whose types are known, but need not be the same
+let x: [string, number];
+
+#### Enum
+
+An enum is a way of giving more friendly names to sets of numeric values
+enum Color {Red, Green, Blue}
+let c: Color = Color.Green;
+
+#### Any
+
+Opt-out of type checking
+
+#### Void
+
+Little like the opposite of any e.g. return type of functions that do not return a value
+
+#### Null and Undefined
+
+#### Never
+
+Represents the type of values that never occur e.g. return type for a function expression or an arrow function expression that always throws an exception or one that never returns
+
+#### Object
+
+A type that represents the non-primitive type e.g. object, array
+
+#### Type assertions
+
+Type assertions are a way to tell the compiler “trust me, I know what I’m doing.”
+
+`let x: [string, number];`

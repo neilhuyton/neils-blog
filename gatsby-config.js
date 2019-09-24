@@ -5,7 +5,25 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/layout.tsx"),
+        },
+        // gatsbyRemarkPlugins: [{ resolve: "gatsby-remark-images" }],
+        // plugins: [{ resolve: "gatsby-remark-images" }],
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: "posts",
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
