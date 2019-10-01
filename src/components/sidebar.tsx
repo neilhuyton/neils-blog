@@ -2,15 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 
-// import Image from "./image"
-
 // eslint-disable-next-line import/no-extraneous-dependencies
-import {
-  ImageProps,
-  PostPreview,
-  PostProps,
-  PostPreviewRenderLinkProps,
-} from "neils-storybook"
+import { Sidebar } from "neils-storybook"
+import usePosts from "../hooks/use-posts"
 
 const RenderLink = ({
   children,
@@ -25,11 +19,14 @@ const RenderLink = ({
 
 const RenderImage = (props: ImageProps) => <Img fluid={props} />
 
-export default (post: PostProps) => (
-  <PostPreview
-    {...post}
-    image={post.image.sharp.fluid}
-    renderLink={RenderLink}
-    renderImage={RenderImage}
-  />
-)
+export default () => {
+  const posts = usePosts()
+  const transformedPosts = posts.map(post => {
+    post.renderLink = RenderLink
+    post.renderImage = RenderImage
+    post.image = post.image.sharp.fluid
+
+    return post
+  })
+  return <Sidebar posts={transformedPosts} />
+}
