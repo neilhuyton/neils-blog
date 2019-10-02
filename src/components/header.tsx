@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Header, LinkProps } from "neils-storybook"
+import { Header, LinkProps } from "@neilhuyton/neils-storybook"
 
 const RenderLink = ({ children, className, slug = "", title }: LinkProps) => (
   <Link to={slug} className={className}>
