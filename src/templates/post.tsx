@@ -5,7 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { ImageProps, LinkProps, Post } from "neils-storybook"
+import { ImageProps, LinkProps, Post } from "@neilhuyton/neils-storybook"
 
 export const query = graphql`
   query($slug: String!) {

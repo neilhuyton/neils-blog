@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Sidebar } from "neils-storybook"
+import { Sidebar } from "@neilhuyton/neils-storybook"
 import usePosts from "../hooks/use-posts"
 
 const RenderLink = ({

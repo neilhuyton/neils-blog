@@ -10,7 +10,7 @@ import {
   PostPreview,
   PostProps,
   PostPreviewRenderLinkProps,
-} from "neils-storybook"
+} from "@neilhuyton/neils-storybook"
 
 const RenderLink = ({
   children,

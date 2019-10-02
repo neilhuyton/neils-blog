@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import usePosts from "../hooks/use-posts"
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { PostProps } from "neils-storybook"
+import { PostProps } from "@neilhuyton/neils-storybook"
 
 const IndexPage = () => {
   const posts = usePosts()
