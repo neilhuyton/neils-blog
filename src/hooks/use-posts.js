@@ -17,8 +17,10 @@ const usePosts = () => {
             }
             slug
             summary
+            tags
             title
           }
+
           excerpt
         }
       }

@@ -6,6 +6,7 @@ author: Neil Huyton
 image: images/photo-1569834381156-7b735e41e57d.jpeg
 summary: "My cool summary"
 menus: main
+tags: ["ESLint", "CSS"]
 ---
 
 #### Type Annotations
@@ -28,6 +29,32 @@ String: textual data, uses double quotes (") or single quotes (') to surround st
 Array:
 first, you use the type of the elements followed by []
 second way uses a generic array type
+
+```javascript
+// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [`gatsby-remark-prismjs`],
+    },
+  },
+]
+```
+
+```tsx
+const IndexPage = () => {
+  const posts = usePosts()
+  return (
+    <Layout>
+      <SEO title="Home" />
+      {posts.map((post: PostProps) => (
+        <PostPreview key={post.slug} {...post} />
+      ))}
+    </Layout>
+  )
+}
+```
 
 #### Tuple
 

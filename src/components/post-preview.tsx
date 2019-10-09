@@ -25,11 +25,13 @@ const RenderLink = ({
 
 const RenderImage = (props: ImageProps) => <Img fluid={props} />
 
-export default (post: PostProps) => (
-  <PostPreview
-    {...post}
-    image={post.image.sharp.fluid}
-    renderLink={RenderLink}
-    renderImage={RenderImage}
-  />
-)
+export default (post: PostProps) => {
+  return (
+    <PostPreview
+      {...post}
+      image={post.image.sharp.fluid}
+      renderLink={RenderLink}
+      renderImage={RenderImage}
+    />
+  )
+}

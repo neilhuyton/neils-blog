@@ -28,6 +28,18 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/components/layout.tsx"),
         },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: {
+                tsx: "tsx",
+              },
+              aliases: {},
+            },
+          },
+        ],
         // gatsbyRemarkPlugins: [{ resolve: "gatsby-remark-images" }],
         // plugins: [{ resolve: "gatsby-remark-images" }],
       },
